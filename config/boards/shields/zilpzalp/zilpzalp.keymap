@@ -1,0 +1,245 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define APT 0
+#define NUM 1
+#define NAV 2
+#define SYM 3
+#define FUN 4
+
+&lt {
+    quick_tap_ms = <200>;
+};
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BSPC LSHFT RSHFT>;
+};
+
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+/* usually on base layer */
+        combo_q {
+            timeout-ms = <40>;
+            key-positions = <2 3>;
+            bindings = <&kp Q>;
+        };
+        combo_z {
+            timeout-ms = <40>;
+            key-positions = <20 21>;
+            bindings = <&kp Z>;
+        };
+        combo_v {
+            timeout-ms = <40>;
+            key-positions = <1 2>;
+            bindings = <&kp V>;
+        };
+        combo_slash {
+            timeout-ms = <40>;
+            key-positions = <24 25>;
+            bindings = <&kp SLASH>;
+        };
+        combo_minus {
+            timeout-ms = <40>;
+            key-positions = <23 24>;
+            bindings = <&kp MINUS>;
+        };
+        combo_esc {
+            timeout-ms = <40>;
+            key-positions = <21 22>;
+            bindings = <&kp ESC>;
+        };
+/* parentheticals */
+        combo_lbrc {
+            timeout-ms = <40>;
+            key-positions = <1 11>;
+            bindings = <&kp LBRC>;
+        };
+        combo_lbkt {
+            timeout-ms = <40>;
+            key-positions = <2 12>;
+            bindings = <&kp LBKT>;
+        };
+        combo_lpar {
+            timeout-ms = <40>;
+            key-positions = <3 13>;
+            bindings = <&kp LPAR>;
+        };
+        combo_lt {
+            timeout-ms = <40>;
+            key-positions = <4 14>;
+            bindings = <&kp LT>;
+        };
+        combo_rbrc {
+            timeout-ms = <40>;
+            key-positions = <8 18>;
+            bindings = <&kp RBRC>;
+        };
+        combo_rbkt {
+            timeout-ms = <40>;
+            key-positions = <7 17>;
+            bindings = <&kp RBKT>;
+        };
+        combo_rpar {
+            timeout-ms = <40>;
+            key-positions = <6 16>;
+            bindings = <&kp RPAR>;
+        };
+        combo_gt {
+            timeout-ms = <40>;
+            key-positions = <5 15>;
+            bindings = <&kp GT>;
+        };
+/* caps */
+        combo_caps-word {
+            timeout-ms = <40>;
+            key-positions = <13 16>;
+            bindings = <&caps_word>;
+        };
+        combo_capslock {
+            timeout-ms = <40>;
+            key-positions = <1 8>;
+            bindings = <&kp CAPSLOCK>;
+        };
+/* deletion */
+        combo_bspc {
+            timeout-ms = <40>;
+            key-positions = <16 17>;
+            bindings = <&kp BSPC>;
+        };
+        combo_del {
+            timeout-ms = <40>;
+            key-positions = <17 18>;
+            bindings = <&kp DEL>;
+        };
+        combo_delword {
+            timeout-ms = <40>;
+            key-positions = <16 18>;
+            bindings = <&kp LC(BSPC)>;
+        };
+    };
+};
+
+
+/ {
+
+    behaviors {
+        hl: homerow_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods left";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <100>;
+            // global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            // opposite side hand keys
+            hold-trigger-key-positions = <4 5 6 7 13 14 15 16 17 21 22 23 26 27>;
+        };
+
+        hr: homerow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods right";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <100>;
+            // global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            // opposite side hand keys
+            hold-trigger-key-positions = <0 1 2 3 8 9 10 11 12 18 19 20 24 25>;
+        };
+
+        dotcol: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COL";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        comsem: comma_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COM_SEM";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
+
+
+// zilpzalp key numbers
+//     __________________________  __________________________
+//    /     0  |  1  |  2  |  3  \/   4 |   5 |   6 |   7    \
+// |  8  |  9  | 10  | 11  | 12  /\  13 |  14 |  15 |  16 | 17  |
+//    \    18  | 19  | 20    /        \    21 |  22 |  23   /
+//          \    24  | 25  /            \  26 |  27    /
+//           --------------              --------------
+
+/ {
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        aptmak {
+            label = "APT";
+
+            bindings = <
+                               &kp W          &kp F          &kp P          &kp B          &kp J          &kp L          &kp U          &kp Y
+                &hl LCTRL R    &hl LALT S     &hl LGUI T     &hl LSHFT H    &hl RALT K     &hr RALT X     &hr RSHFT N    &hr RGUI A     &hr LALT I     &hr RCTRL O
+                               &kp C          &kp G          &kp D                                        &kp M          &comsem        &dotcol
+                                                             &lt NUM SQT    &lt NAV SPACE  &lt SYM E      &lt FUN ENTER
+            >;
+        };
+        numbers {
+            label = "NUM";
+
+            bindings = <
+                               &kp N9         &kp N8         &kp N7         &none          &kp PLUS       &kp N7         &kp N8         &kp N9
+                &kp LCTRL      &hl LALT N3    &hl LGUI N2    &hl LSHFT N1   &hl RALT N0    &kp MINUS      &kp N4         &kp N5         &kp N6         &kp SLASH
+                               &kp N6         &kp N5         &kp N4                                       &kp N1         &kp N2         &kp N3
+                                                             &trans         &trans         &kp E          &kp N0
+            >;
+        };
+        navigation {
+            label = "NAV";
+
+            bindings = <
+                               &kp INSERT     &kp UP         &kp BSPC        &kp C_VOL_DN   &kp C_VOL_UP   &kp BSPC       &kp DEL        &kp INSERT
+                &kp LCTRL      &hl LALT LEFT  &hl LGUI DOWN  &hl LSHFT RIGHT &kp C_MUTE     &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp TAB
+                               &kp HOME       &kp PG_DN      &kp END                                       &kp HOME       &kp PG_UP      &kp END
+                                                             &trans          &trans         &trans         &trans
+            >;
+        };
+        symbols {
+            label = "SYM";
+
+            bindings = <
+                               &kp GRAVE      &kp DQT        &kp RA(LS(SEMI)) &kp LBRC       &kp RBRC       &kp BACKSLASH  &kp PIPE       &kp LT
+                &kp EXCL       &kp AT         &kp HASH       &kp DOLLAR       &kp LPAR       &kp RPAR       &kp AMPERSAND  &kp ASTERISK   &kp PERCENT    &kp CARET
+                               &kp TILDE      &kp SQT        &kp UNDERSCORE                                 &kp MINUS      &kp PLUS       &kp EQUAL
+                                                             &kp LBKT         &kp RBKT       &trans         &trans
+            >;
+        };
+        function {
+            label = "FUN";
+
+            bindings = <
+                               &trans         &trans         &trans         &trans         &kp F12        &kp F7         &kp F8         &kp F9
+                &bootloader    &trans         &trans         &trans         &trans         &kp F11        &kp F4         &kp F5         &kp F6         &kp F10
+                               &trans         &trans         &trans                                       &kp F1         &kp F2         &kp F3
+                                                             &trans         &trans         &trans         &trans
+            >;
+        };
+
+    };
+};
+
+//     __________________________  __________________________
+//    /     1  |  2  |  3  |  4  \/   5 |   6 |   7 |   8    \
+// | 10  | 11  | 12  | 13  | 14  ||  15 |  16 |  17 |  18 | 19  |
+//    \    20  | 21  | 22  |     ||     |  23 |  24 |  25   /
+//                \    26  | 27  /\  28 |  29    /
+//                 --------------  --------------
