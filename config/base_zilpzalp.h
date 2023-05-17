@@ -10,7 +10,7 @@
 #define FUN 4
 
 &lt {
-    quick_tap_ms = <200>;
+    quick_tap_ms = <170>;
 };
 
 &caps_word {
@@ -131,10 +131,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods left";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
             quick-tap-ms = <100>;
-            // global-quick-tap;
+            global-quick-tap;
             bindings = <&kp>, <&kp>;
             // opposite side hand keys
             hold-trigger-key-positions = <4 5 6 7 13 14 15 16 17 21 22 23 26 27>;
@@ -144,10 +144,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods right";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
             quick-tap-ms = <100>;
-            // global-quick-tap;
+            global-quick-tap;
             bindings = <&kp>, <&kp>;
             // opposite side hand keys
             hold-trigger-key-positions = <0 1 2 3 8 9 10 11 12 18 19 20 24 25>;
