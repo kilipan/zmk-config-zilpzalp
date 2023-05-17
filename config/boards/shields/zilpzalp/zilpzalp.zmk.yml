@@ -4,7 +4,7 @@ name: zilpzalp
 type: shield
 url: https://github.com/kilipan/zilpzalp
 requires: 
-  # - seeeduino_xiao_ble
+  - seeeduino_xiao_ble
   - seeeduino_xiao_rp2040
 features:
   - keys
