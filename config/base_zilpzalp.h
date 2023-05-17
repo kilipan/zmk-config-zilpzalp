@@ -9,9 +9,9 @@
 #define SYM 3
 #define FUN 4
 
-&lt {
-    quick_tap_ms = <170>;
-};
+// &lt {
+//     quick_tap_ms = <170>;
+// };
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS BSPC LSHFT RSHFT>;
@@ -131,8 +131,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods left";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <170>;
+            // flavor = "tap-preferred";
+            flavor = "balanced";
+            tapping-term-ms = <150>;
             quick-tap-ms = <100>;
             // global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -143,8 +144,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods right";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <170>;
+            // flavor = "tap-preferred";
+            flavor = "balanced";
+            tapping-term-ms = <150>;
             quick-tap-ms = <100>;
             // global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -156,8 +158,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "my layer taps";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <170>;
+            // flavor = "tap-preferred";
+            flavor = "balanced";
+            tapping-term-ms = <150>;
             quick-tap-ms = <100>;
             // global-quick-tap;
             bindings = <&mo &kp>, <&kp>;
