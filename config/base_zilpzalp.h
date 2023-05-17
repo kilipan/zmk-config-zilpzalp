@@ -131,7 +131,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods left";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <170>;
             quick-tap-ms = <100>;
             // global-quick-tap;
@@ -143,7 +143,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods right";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <170>;
             quick-tap-ms = <100>;
             // global-quick-tap;
@@ -156,7 +156,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "my layer taps";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <170>;
             quick-tap-ms = <100>;
             // global-quick-tap;
