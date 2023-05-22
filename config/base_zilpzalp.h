@@ -138,7 +138,7 @@
             // global-quick-tap;
             bindings = <&kp>, <&kp>;
             // opposite side hand keys
-            hold-trigger-key-positions = <4 5 6 7 13 14 15 16 17 21 22 23 26 27>;
+            hold-trigger-key-positions = <4 5 6 7 13 14 15 16 17 21 22 23 24 25 26 27>;
         };
         hr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
@@ -151,7 +151,7 @@
             // global-quick-tap;
             bindings = <&kp>, <&kp>;
             // opposite side hand keys
-            hold-trigger-key-positions = <0 1 2 3 8 9 10 11 12 18 19 20 24 25>;
+            hold-trigger-key-positions = <0 1 2 3 8 9 10 11 12 18 19 20 24 25 26 27>;
         };
 
         my_lt: my_layer_taps {
