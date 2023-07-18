@@ -40,30 +40,30 @@ combo_##NAME { \
     combos {
         compatible = "zmk,combos";
 /* usually on base layer */
-        COMBO(q, &kp Q, <1 2>)
-        COMBO(z, &kp Z, <18 19>)
-        COMBO(v, &kp V, <0 1>)
-        COMBO(sch, &macro_sch, <0 2>)
-        COMBO(slash, &kp SLASH, <22 23>)
-        COMBO(dash, &kp MINUS, <21 22>)
-        COMBO(enter, &kp ENTER, <21 22 23>)
-        COMBO(esc, &kp ESC, <19 20>)
+        COMBO(q, &kp Q, 1 2)
+        COMBO(z, &kp Z, 18 19)
+        COMBO(v, &kp V, 0 1)
+        COMBO(sch, &macro_sch, 0 2)
+        COMBO(slash, &kp SLASH, 22 23)
+        COMBO(dash, &kp MINUS, 21 22)
+        COMBO(enter, &kp ENTER, 21 22 23)
+        COMBO(esc, &kp ESC, 19 20)
 /* parentheticals */
-        COMBO(lbrc, &kp LBRC, <0 9>)
-        COMBO(lbkt, &kp LBKT, <1 10>)
-        COMBO(lpar, &kp LPAR, <2 11>)
-        COMBO(lt, &kp LT, <3 12>)
-        COMBO(gt, &kp GT, <4 13>)
-        COMBO(rpar, &kp RPAR, <5 14>)
-        COMBO(rbkt, &kp RBKT, <6 15>)
-        COMBO(rbrc, &kp RBRC, <7 16>)
+        COMBO(lbrc, &kp LBRC, 0 9)
+        COMBO(lbkt, &kp LBKT, 1 10)
+        COMBO(lpar, &kp LPAR, 2 11)
+        COMBO(lt, &kp LT, 3 12)
+        COMBO(gt, &kp GT, 4 13)
+        COMBO(rpar, &kp RPAR, 5 14)
+        COMBO(rbkt, &kp RBKT, 6 15)
+        COMBO(rbrc, &kp RBRC, 7 16)
 /* caps */
-        COMBO(caps, &caps_word, <11 14>)
-        COMBO(capslock, &kp CAPSLOCK, <0 7>)
+        COMBO(caps, &caps_word, 11 14)
+        COMBO(capslock, &kp CAPSLOCK, 0 7)
 /* deletion */
-        COMBO(bspc, &kp BSPC, <5 6>)
-        COMBO(del, &kp DEL, <6 7>)
-        COMBO(delword, &kp LC(BSPC), <5 7>)
+        COMBO(bspc, &kp BSPC, 5 6)
+        COMBO(del, &kp DEL, 6 7)
+        COMBO(delword, &kp LC(BSPC), 5 7)
     };
 };
 
