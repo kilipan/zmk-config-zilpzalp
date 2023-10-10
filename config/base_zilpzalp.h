@@ -71,7 +71,7 @@ combo_##NAME { \
         COMBO(bspc, &kp BSPC, 5 6)
         COMBO(del, &kp DEL, 6 7)
         COMBO(delword, &kp LC(BSPC), 5 7)
-/* alternative shifting
+/* alternative shifting */
         COMBO(Sq, &kp LS(Q), 1 2 24)
         COMBO(Sz, &kp LS(Z), 18 19 24)
         COMBO(Sv, &kp LS(V), 0 1 24)
@@ -101,7 +101,6 @@ combo_##NAME { \
         COMBO(Scomma, &kp SEMI, 22 27)
         COMBO(Sdot, &kp COLON, 23 27)
         COMBO(Se, &kp LS(E), 17 26)
-*/
     };
 };
 
