@@ -20,10 +20,16 @@
 / {
     macros {
         macro_sch: macro_sch {
-            label = "Macro_SCH";
+            label = "Macro_sch";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp S &kp C &kp H>;
+        };
+        macro_shifted_sch: macro_shifted_sch {
+            label = "Macro_Sch";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LS(S) &kp C &kp H>;
         };
     };
 };
@@ -46,7 +52,8 @@ combo_##NAME { \
         COMBO(sch, &macro_sch, 0 2)
         COMBO(slash, &kp SLASH, 22 23)
         COMBO(dash, &kp MINUS, 21 22)
-        COMBO(enter, &kp ENTER, 21 22 23)
+//        COMBO(enter, &kp ENTER, 21 22 23)
+        COMBO(enter, &kp ENTER, 21 23)
         COMBO(esc, &kp ESC, 19 20)
 /* parentheticals */
         COMBO(lbrc, &kp LBRC, 0 9)
@@ -64,8 +71,43 @@ combo_##NAME { \
         COMBO(bspc, &kp BSPC, 5 6)
         COMBO(del, &kp DEL, 6 7)
         COMBO(delword, &kp LC(BSPC), 5 7)
+/* alternative shifting */
+	COMBO(shifted_q, &kp LS(Q), 24 1 2)
+	COMBO(shifted_z, &kp LS(Z), 24 18 19)
+	COMBO(shifted_v, &kp LS(V), 24 0 1)
+        COMBO(shifted_sch, &macro_shifted_sch, 24 0 2)
+	COMBO(shifted_w, &kp LS(W), 24 0)
+	COMBO(shifted_f, &kp LS(F), 24 1)
+	COMBO(shifted_p, &kp LS(P), 24 2)
+	COMBO(shifted_b, &kp LS(B), 24 3)
+	COMBO(shifted_j, &kp LS(J), 27 4)
+	COMBO(shifted_l, &kp LS(L), 27 5)
+	COMBO(shifted_u, &kp LS(U), 27 6)
+	COMBO(shifted_y, &kp LS(Y), 27 7)
+	COMBO(shifted_r, &kp LS(R), 24 4)
+	COMBO(shifted_s, &kp LS(S), 24 5)
+	COMBO(shifted_t, &kp LS(T), 24 6)
+	COMBO(shifted_h, &kp LS(H), 24 7)
+	COMBO(shifted_k, &kp LS(K), 24 8)
+	COMBO(shifted_x, &kp LS(X), 27 9)
+	COMBO(shifted_n, &kp LS(N), 27 10)
+	COMBO(shifted_a, &kp LS(A), 27 11)
+	COMBO(shifted_i, &kp LS(I), 27 12)
+	COMBO(shifted_o, &kp LS(O), 27 13)
+	COMBO(shifted_c, &kp LS(C), 24 14)
+	COMBO(shifted_g, &kp LS(G), 24 15)
+	COMBO(shifted_d, &kp LS(D), 24 16)
+	COMBO(shifted_m, &kp LS(M), 27 17)
+	COMBO(shifted_e, &kp LS(E), 17 26)
     };
 };
+
+//     __________________________  __________________________
+//    /     0  |  1  |  2  |  3  \/   4 |   5 |   6 |   7    \
+// |  8  |  9  | 10  | 11  | 12  /\  13 |  14 |  15 |  16 | 17  |
+//    \    18  | 19  | 20    /        \    21 |  22 |  23   /
+//          \    24  | 25  /            \  26 |  27    /
+//           --------------              --------------
 
 
 / {
