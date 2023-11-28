@@ -23,7 +23,11 @@
             label = "Macro_sch";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp S &kp C &kp H>;
+            bindings = <
+		    &macro_tap &kp S
+		    &macro_release &kp LSHIFT
+		    &macro_tap &kp C &kp H
+	    >;
         };
         macro_shifted_sch: macro_shifted_sch {
             label = "Macro_Sch";
