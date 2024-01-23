@@ -29,12 +29,6 @@
 		    &macro_tap &kp C &kp H
 	    >;
         };
-        macro_shifted_sch: macro_shifted_sch {
-            label = "Macro_Sch";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LS(S) &kp C &kp H>;
-        };
     };
 };
 
@@ -83,7 +77,6 @@ combo_##NAME { \
         COMBO(Sq, &kp LS(Q), 1 2 25)
         COMBO(Sz, &kp LS(Z), 18 19 25)
         COMBO(Sv, &kp LS(V), 0 1 25)
-        COMBO(Ssch, &macro_shifted_sch, 0 2 25)
         COMBO(Sw, &kp LS(W), 0 25)
         COMBO(Sf, &kp LS(F), 1 25)
         COMBO(Sp, &kp LS(P), 2 25)
