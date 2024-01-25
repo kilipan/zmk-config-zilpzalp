@@ -4,3 +4,5 @@ include:
     shield: zilpzalp
   - board: seeeduino_xiao_ble
     shield: zilpzalp_ble
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
