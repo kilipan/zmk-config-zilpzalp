@@ -23,7 +23,7 @@
             #binding-cells = <0>;
             bindings = <
 		    &macro_tap &kp S
-		    &macro_release &kp LSHIFT
+		    &macro_release &kp RSHIFT
 		    &macro_tap &kp C &kp H
 	    >;
         };
