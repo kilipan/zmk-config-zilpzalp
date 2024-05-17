@@ -55,7 +55,7 @@
             bindings = <
                                &none          &none          &none            &none          &none          &none          &none          &none
                 &kp EXCL       &kp AT         &kp HASH       &kp DOLLAR       &none          &none          &kp AMPERSAND  &kp ASTERISK   &kp PERCENT    &kp CARET
-                               &kp GRAVE      &kp DQT        &kp UNDERSCORE                                 &kp MINUS      &kp PLUS       &kp EQUAL
+                               &kp GRAVE      &kp DQT        &kp UNDERSCORE                                 &kp BACKSLASH  &kp PIPE       &kp EQUAL
                                                              &kp TILDE        &trans         &trans         &trans
             >;
         };
