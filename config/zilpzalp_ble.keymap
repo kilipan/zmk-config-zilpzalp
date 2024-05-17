@@ -30,9 +30,9 @@
             label = "NUM";
 
             bindings = <
-                               &kp F          &kp E          &kp D          &kp ASTERISK   &kp PLUS       &kp N7         &kp N8         &kp N9
-                &hl LCTRL x    &hl LALT C     &hl LGUI B     &hl LSHFT A    &hl RALT SLASH &kp MINUS      &kp N4         &kp N5         &kp N6         &kp DOT
-                               &kp N9         &kp N8         &kp N7                                       &kp N1         &kp N2         &kp N3
+                                  &none             &none                &none              &none          &none          &kp N7         &kp N8         &kp N9
+                &hl LCTRL KP_PLUS &hl LALT KP_MINUS &hl LGUI KP_ASTERISK &hl LSHFT KP_SLASH &kp RALT       &none          &kp N4         &kp N5         &kp N6         &kp DOT
+                                  &kp N9            &kp N8               &kp N7                                           &kp N1         &kp N2         &kp N3
                                                              &trans         &trans         &kp E          &kp N0
             >;
         };
@@ -40,8 +40,8 @@
             label = "NAV";
 
             bindings = <
-                               &kp INSERT     &kp UP         &kp BSPC        &kp C_VOL_DN   &kp C_VOL_UP   &kp LC(LEFT)   &kp LC(RIGHT)  &kp INSERT
-                &kp LCTRL      &hl LALT LEFT  &hl LGUI DOWN  &hl LSHFT RIGHT &kp C_MUTE     &kp C_MUTE     &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT
+                               &none          &none          &none           &kp C_VOL_UP   &kp LC(X)      &kp LC(INSERT  &kp LS(INSERT) &kp INSERT
+                &sk LCTRL      &sk LALT       &sk LGUI       &sk LSHFT       &kp C_VOL_DN   &kp C_MUTE     &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT
                                &kp HOME       &kp PG_DN      &kp END                                       &kp HOME       &kp PG_UP      &kp END
                                                              &trans          &trans         &trans         &trans
             >;
@@ -50,10 +50,10 @@
             label = "SYM";
 
             bindings = <
-                               &kp GRAVE      &kp DQT        &kp RA(LS(SEMI)) &kp LBRC       &kp RBRC       &kp BACKSLASH  &kp PIPE       &kp LT
-                &kp EXCL       &kp AT         &kp HASH       &kp DOLLAR       &kp LPAR       &kp RPAR       &kp AMPERSAND  &kp ASTERISK   &kp PERCENT    &kp CARET
-                               &kp TILDE      &kp SQT        &kp UNDERSCORE                                 &kp MINUS      &kp PLUS       &kp EQUAL
-                                                             &kp LBKT         &kp RBKT       &trans         &trans
+                               &none          &none          &none            &none          &none          &none          &none          &none
+                &kp EXCL       &kp AT         &kp HASH       &kp DOLLAR       &none          &none          &kp AMPERSAND  &kp ASTERISK   &kp PERCENT    &kp CARET
+                               &kp GRAVE      &kp DQT        &kp UNDERSCORE                                 &kp MINUS      &kp PLUS       &kp EQUAL
+                                                             &kp TILDE        &trans         &trans         &trans
             >;
         };
         function {

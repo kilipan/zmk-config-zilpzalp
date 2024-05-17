@@ -22,10 +22,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
-		    &macro_tap &kp S
-		    &macro_release &kp RSHIFT
-		    &macro_tap &kp C &kp H
-	    >;
+        		    &macro_tap &kp S
+        		    &macro_release &kp RSHIFT
+        		    &macro_tap &kp C &kp H
+	          >;
         };
     };
 };
@@ -45,10 +45,10 @@ combo_##NAME { \
         COMBO(q, &kp Q, 1 2)
         COMBO(z, &kp Z, 18 19)
         COMBO(v, &kp V, 0 1)
-        COMBO(_ae, &kp RA(A), 15 27)
-        COMBO(_oe, &kp RA(O), 17 27)
-        COMBO(_ue, &kp RA(U), 6 27)
-        COMBO(_sz, &kp RA(S), 9 24)
+        COMBO(_ae, &kp RA(A), 15 26)
+        COMBO(_oe, &kp RA(O), 17 26)
+        COMBO(_ue, &kp RA(U), 6 26)
+        COMBO(_sz, &kp RA(S), 9 25)
         COMBO(sch, &macro_sch, 0 2)
         COMBO(slash, &kp SLASH, 22 23)
         COMBO(dash, &kp MINUS, 21 22)
