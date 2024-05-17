@@ -43,7 +43,7 @@
             label = "NAV";
 
             bindings = <
-                               &none          &none          &none           &kp C_VOL_UP   &kp LC(X)      &kp LC(INSERT  &kp LS(INSERT) &kp INSERT
+                               &none          &none          &none           &kp C_VOL_UP   &kp LC(X)      &kp LC(INSERT) &kp LS(INSERT) &kp INSERT
                 &sk LCTRL      &sk LALT       &sk LGUI       &sk LSHFT       &kp C_VOL_DN   &kp C_MUTE     &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT
                                &kp HOME       &kp PG_DN      &kp END                                       &kp HOME       &kp PG_UP      &kp END
                                                              &trans          &trans         &trans         &trans
